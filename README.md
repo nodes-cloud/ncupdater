@@ -62,3 +62,8 @@ if ARGV[0] == 'update'
 end
 ```
 
+## Todo
+
+- Write some tests
+- Write doc blocks
+- Better error handling

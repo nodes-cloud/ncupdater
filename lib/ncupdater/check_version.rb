@@ -19,7 +19,7 @@ class CheckVersion
   end
 
   def remote_version
-    uri = URI.parse( @remote_url );
+    uri = URI.parse( @remote_url )
 
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Get.new(uri.path)
