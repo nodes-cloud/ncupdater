@@ -1,13 +1,13 @@
-class CheckVersion
+class NCCheckVersion
 
-  def check_for_updates(semver_path, remote_url)
+  def check_for_updates(semver_path = '', remote_url = '')
     @semver_path = semver_path
     @remote_url = remote_url
 
-    update = Semantic::Version.new "#{current_version}"
+    local_version = Semantic::Version.new "#{current_version}"
     newer_version = Semantic::Version.new "#{remote_version}"
 
-    if update < newer_version
+    if local_version < newer_version
       return true
     end
     return false

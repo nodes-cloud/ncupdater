@@ -1,4 +1,5 @@
-class Update
+class NCUpdate
+
   def update(commands)
     commands.each do |key, value|
       ShellSpinner "#{key}" do
@@ -6,4 +7,5 @@ class Update
       end
     end
   end
+
 end

@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files         = Dir['README.md', 'lib/**/*']
   s.require_paths = %w(lib)
 
-  s.add_runtime_dependency 'colorize'
-  s.add_runtime_dependency 'shell-spinner'
-  s.add_runtime_dependency 'semantic'
+  s.add_dependency 'colorize'
+  s.add_dependency 'shell-spinner'
+  s.add_dependency 'semantic'
 end

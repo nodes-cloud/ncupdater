@@ -19,14 +19,14 @@ class NCUpdater
 
   def update
     if new_version?
-      Update::new::update(@commands)
+      NCUpdate::new::update(@commands)
     else
       puts 'You are already on latest version..'.colorize(:yellow)
     end
   end
 
   def new_version?
-    CheckVersion::new::check_for_updates(@semver_path, @remote_url)
+    NCCheckVersion::new::check_for_updates(@semver_path, @remote_url)
   end
 
 end
