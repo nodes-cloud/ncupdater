@@ -1,4 +1,7 @@
 # ncupdater
+
+[![Gem Version](https://badge.fury.io/rb/ncupdater.svg)](https://badge.fury.io/rb/ncupdater)
+
 NCUpdater provides you with an easy way to update your ruby scripts. You specify a link to a small text file with latest version number, and the path of a .semver file in your project.
 It will then check for updates every time your project starts. You can run update with a list of commands you would like to run.
 
