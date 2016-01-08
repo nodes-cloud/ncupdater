@@ -1,21 +1,18 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path('../lib', __FILE__)
 
-Gem::Specification.new do |spec|
-  spec.add_dependency 'colorize'
-  spec.add_dependency 'shell-spinner'
-  spec.add_dependency 'semantic'
-  spec.add_development_dependency 'bundler', '~> 1.0'
-  spec.authors = ['Jonas Schwartz', 'Sigurd Kristensen']
-  spec.description = %q{Easy way to update any ruby script}
-  spec.email = ['josc@nodes.dk', 'sikr@nodes.dk']
-  spec.extra_rdoc_files = %w(readme.md)
-  spec.files = `git ls-files -z`.split("\x0").reject { |f| f.start_with?('test/') }
-  spec.homepage = 'http://github.com/nodes-cloud/ncupdater'
-  spec.name = 'ncupdater'
-  spec.require_paths = ['lib']
-  spec.required_ruby_version = '>= 1.9.3'
-  spec.summary = spec.description
-  spec.version = `cat ./.semver`
+Gem::Specification.new do |s|
+  s.name          = 'ncupdater'
+  s.version       = `cat ./.semver`
+  s.authors       = ['Jonas Schwartz', 'Sigurd Kristensen']
+  s.email         = %w(tech@nodes.dk)
+  s.homepage      = 'https://github.com/nodes-cloud/ncupdater'
+  s.summary       = %q{Easy way to update any ruby script}
+  s.description   = %q{A small handy upgrade tool for ruby scripts. just provide a version file, and a url for latest version, and the script will handle the rest}
+  s.files         = Dir['README.md', 'lib/**/*']
+  s.require_paths = %w(lib)
+
+  s.add_runtime_dependency 'colorize'
+  s.add_runtime_dependency 'shell-spinner'
+  s.add_runtime_dependency 'semantic'
 end
