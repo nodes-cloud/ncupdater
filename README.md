@@ -1,11 +1,19 @@
 # ncupdater
 ## WIP!
 
+## Install
+
+```bash
+gem install ncupdater
+```
+
 ## Example
 
 ### Basic usage
 
 ```ruby
+require 'ncupdater'
+
 # Define commands to run the update
 commands = {
     :'Gem update' => 'gem update my-command',
