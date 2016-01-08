@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.description   = %q{A small handy upgrade tool for ruby scripts. just provide a version file, and a url for latest version, and the script will handle the rest}
   s.files         = Dir['README.md', 'lib/**/*']
   s.require_paths = %w(lib)
+  s.license       = 'MIT'
 
   s.add_dependency 'colorize'
   s.add_dependency 'shell-spinner'
